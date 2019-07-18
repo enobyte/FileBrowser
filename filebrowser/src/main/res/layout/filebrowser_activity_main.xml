@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
@@ -24,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="8dp"
-            custom:bootstrapSize="sm">
+            bootstrapSize="sm">
 
             <TextView
                 android:layout_width="match_parent"
@@ -36,14 +35,14 @@
         <com.roughike.bottombar.BottomBar
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            custom:bb_tabXmlResource="@xml/path_change_menu"
+            bb_tabXmlResource="@xml/path_change_menu"
             android:id="@+id/currPath_Nav"
-            custom:bb_showShadow="false"/>
+            bb_showShadow="false"/>
 
     </LinearLayout>
     <com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView
-        custom:fastScrollAutoHide="true"
-        custom:fastScrollAutoHideDelay="1500"
+        fastScrollAutoHide="true"
+        fastScrollAutoHideDelay="1500"
         android:id="@+id/recycler_view"
         android:scrollbars="vertical"
         android:layout_width="match_parent"
@@ -65,7 +64,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        custom:bb_tabXmlResource="@xml/bottom_nav_items"
+        bb_tabXmlResource="@xml/bottom_nav_items"
         android:id="@+id/bottom_navigation"/>
 
 </RelativeLayout>
