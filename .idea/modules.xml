@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/Android-FileBrowser-FilePicker.iml" filepath="$PROJECT_DIR$/Android-FileBrowser-FilePicker.iml" />
       <module fileurl="file://$PROJECT_DIR$/FileBrowser.iml" filepath="$PROJECT_DIR$/FileBrowser.iml" />
       <module fileurl="file://$PROJECT_DIR$/filebrowser/filebrowser.iml" filepath="$PROJECT_DIR$/filebrowser/filebrowser.iml" />
-      <module fileurl="file://$PROJECT_DIR$/filebrowser/filebrowser.iml" filepath="$PROJECT_DIR$/filebrowser/filebrowser.iml" />
     </modules>
   </component>
 </project>
