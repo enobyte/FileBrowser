@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.enobyte'
 
 
 ext {
@@ -37,8 +39,5 @@ dependencies {
     implementation 'com.simplecityapps:recyclerview-fastscroll:1.0.20'
     implementation files('libs/commons-io-2.6.jar')
 }
-
-apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.enobyte'
 
 //apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
