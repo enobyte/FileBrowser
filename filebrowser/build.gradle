@@ -40,4 +40,5 @@ dependencies {
 
 apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.enobyte'
+
 //apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
