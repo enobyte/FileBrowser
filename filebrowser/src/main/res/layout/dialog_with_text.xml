@@ -2,12 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:theme="@android:style/Theme.Dialog">
 
     <com.beardedhen.androidbootstrap.BootstrapEditText
         android:id="@+id/addedText"
-        bootstrapSize="md"
+        app:bootstrapSize="md"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -20,9 +21,9 @@
 
         <com.beardedhen.androidbootstrap.BootstrapButton
             android:id="@+id/okbutton"
-            bootstrapBrand="success"
-            bootstrapSize="md"
-            roundedCorners="true"
+            app:bootstrapBrand="success"
+            app:bootstrapSize="md"
+            app:roundedCorners="true"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:layout_alignParentRight="true"

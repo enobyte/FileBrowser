@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,62 +9,63 @@
 
     <include
         android:id="@+id/filebrowser_tool_bar"
-        layout="@layout/filebrowser_toolbar"/>
+        layout="@layout/filebrowser_toolbar" />
 
     <LinearLayout
+        android:id="@+id/address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/address"
-        android:orientation="vertical"
-        android:layout_below="@+id/filebrowser_tool_bar">
+        android:layout_below="@+id/filebrowser_tool_bar"
+        android:orientation="vertical">
 
         <com.beardedhen.androidbootstrap.BootstrapWell
+            app:bootstrapSize="sm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="8dp"
-            bootstrapSize="sm">
+            android:layout_margin="8dp">
 
             <TextView
+                android:id="@+id/currentPath"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/currentPath"/>
+                android:layout_height="wrap_content" />
 
         </com.beardedhen.androidbootstrap.BootstrapWell>
 
         <com.roughike.bottombar.BottomBar
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            bb_tabXmlResource="@xml/path_change_menu"
             android:id="@+id/currPath_Nav"
-            bb_showShadow="false"/>
+            app:bb_showShadow="false"
+            app:bb_tabXmlResource="@xml/path_change_menu"
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
 
     </LinearLayout>
+
     <com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView
-        fastScrollAutoHide="true"
-        fastScrollAutoHideDelay="1500"
         android:id="@+id/recycler_view"
-        android:scrollbars="vertical"
+        app:fastScrollAutoHide="true"
+        app:fastScrollAutoHideDelay="1500"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_navigation"
         android:layout_below="@+id/address"
-        android:layout_above="@+id/bottom_navigation"/>
+        android:scrollbars="vertical" />
 
     <!--<android.support.design.widget.BottomNavigationView-->
-        <!--android:id="@+id/bottom_navigation"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="start"-->
-        <!--design:menu="@menu/bottom_nav_items"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:background="@android:color/white"-->
-        <!--app:itemIconTint="@drawable/nav_selector"-->
-        <!--app:itemTextColor="@drawable/nav_selector"/>-->
+    <!--android:id="@+id/bottom_navigation"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="start"-->
+    <!--design:menu="@menu/bottom_nav_items"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:background="@android:color/white"-->
+    <!--app:itemIconTint="@drawable/nav_selector"-->
+    <!--app:itemTextColor="@drawable/nav_selector"/>-->
     <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottom_navigation"
+        bb_tabXmlResource="@xml/bottom_nav_items"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        bb_tabXmlResource="@xml/bottom_nav_items"
-        android:id="@+id/bottom_navigation"/>
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>
